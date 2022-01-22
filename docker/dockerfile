@@ -1,0 +1,20 @@
+FROM node:alpine
+
+#set the working direction
+
+WORKDIR /app
+
+
+add /app/node_modules/.bin to $PATH
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+RUN yarn add create-react-app
+
+RUN yarn create-react-app my-app
+
+RUN yarn install
+
+RUN cd my-app
+
+RUN yarn start

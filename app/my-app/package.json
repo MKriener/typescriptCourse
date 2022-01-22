@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.5.5",
+    "typescript-language-server": "^0.9.4"
+  },
+  "name": "my-app",
+  "version": "1.0.0",
+  "main": "script.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "sudo tsc -p ./",
+    "watch": "sudo tsc -watch -p ./",
+    "start": "lite-server"
+  }
+}
