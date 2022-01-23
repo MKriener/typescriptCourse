@@ -1,31 +1,30 @@
-interface Sized {
-    length : number;
-}
+import {Point2D, Point3D} from './lib.js'
 
-function lengthComparison<Type extends Sized>(arr1, arr2) {
-    return arr1.length > arr2.length ? arr1 : arr2;
-}
-const a1 = [1,2,3];
-const a2 = [2,3];
+const p1 = new Point2D(0,0);
+p1.yPos = 1;
+p1.xPos = 1;
+console.log(p1);
+// Static member is not accessible
+// console.log(p1.NUM_DIMENSIONS);
+console.log(Point2D.NUM_DIMENSIONS);
 
-const r1 = lengthComparison(a1, a2);
-console.log(a1);
+const p2 = new Point3D(0,0,0);
+p2.zPos = 1;
+console.log(p2);
+console.log(Point3D.NUM_DIMENSIONS);
 
-const r2 = lengthComparison(10, 100);
 
-interface MyGrades {
-    grades: number[],
-    length: number,
-}
+import * as lib from './lib.js'
 
-const alicesGrades: MyGrades ={
-    grades:[1,2],
-    length: 2,
-}
+const p3 = new lib.Point2D(0,0);
+p3.yPos = 1;
+p3.xPos = 1;
+console.log(p3);
+// Static member is not accessible
+// console.log(p1.NUM_DIMENSIONS);
+console.log(lib.Point2D.NUM_DIMENSIONS);
 
-const bobsGrades: MyGrades ={
-    grades:[1,2,3],
-    length: 3,
-}
-
-const r3 = lengthComparison(alicesGrades, bobsGrades);
+const p4 = new lib.Point3D(0,0,0);
+p4.zPos = 1;
+console.log(p4);
+console.log(lib.Point3D.NUM_DIMENSIONS);

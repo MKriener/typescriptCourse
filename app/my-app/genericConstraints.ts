@@ -9,9 +9,10 @@ const a1 = [1,2,3];
 const a2 = [2,3];
 
 const r1 = lengthComparison(a1, a2);
-console.log(a1);
+console.log(r1);
 
 const r2 = lengthComparison(10, 100);
+console.log(r2);
 
 interface MyGrades {
     grades: number[],
